@@ -1,0 +1,740 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import MainSlider from "../components/MainSlider.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <div class="custom-cursor__cursor"></div>
+  <div class="custom-cursor__cursor-two"></div>
+
+  <div class="preloader">
+    <div
+      class="preloader__image"
+      style="background-image: url(assets/images/loader.png);"
+    >
+    </div>
+  </div>
+  <!-- /.preloader -->
+  <div class="page-wrapper">
+    <Header />
+    <!-- /.main-header -->
+
+    <!-- main slider start -->
+    <MainSlider />
+    <!-- /.main-slider-two -->
+    <!-- main slider end -->
+
+    <!-- services start -->
+    <section class="services-two section-space-two">
+      <div class="container">
+        <div class="services-two__top">
+          <div class="row gutter-y-50 align-items-center">
+            <div class="col-lg-8 col-md-10">
+              <div class="sec-title @@extraClassName">
+                <h6 class="sec-title__tagline">
+                  collections
+                </h6><!-- /.sec-title__tagline -->
+
+                <h3 class="sec-title__title">
+                  The Art of Quartz: Explore Our Collections
+                </h3><!-- /.sec-title__title -->
+              </div><!-- /.sec-title -->
+            </div><!-- /.col-lg-8 -->
+          </div><!-- /.row -->
+        </div><!-- /.services-two__top -->
+      </div><!-- /.container -->
+      <div class="container-fluid">
+        <div
+          class="services-two__carousel floens-owl__carousel floens-owl__carousel--basic-nav owl-carousel owl-theme"
+          data-owl-options='{
+			"items": 1,
+			"margin": 0,
+			"loop": true,
+			"smartSpeed": 700,
+			"nav": true,			
+			"dots": false,
+			"autoplay": 600,
+			"responsive":{
+                "0":{
+                    "items": 1,
+                    "margin": 15
+                },
+				"576":{
+                    "items": 1,
+                    "margin": 15
+                },
+                "768":{
+                    "items": 2,
+                    "margin": 30
+                },
+                "992":{
+                    "items": 2,
+                    "margin": 30
+                },
+                "1200":{
+                    "items": 3,
+                    "margin": 30
+                },
+                "1400":{
+                    "items": 3,
+                    "margin": 30
+                },
+                "1600":{
+                    "items": 4,
+                    "margin": 30
+                }
+			}
+		}'
+        >
+          <div class="item">
+            <div class="service-card-two">
+              <div
+                class="service-card-two__bg"
+                style="background-image: url('assets/images/services/service-bg-2-1.png');"
+              >
+              </div><!-- /.service-card-two__bg -->
+              <div class="service-card-two__image">
+                <img
+                  src="assets/images/services/service-2-1.jpg"
+                  alt="Tiling & concrete"
+                />
+              </div><!-- /.service-card-two__image -->
+              <div class="service-card-two__content">
+                <h3 class="service-card-two__title">
+                  <a href="service-d-tiling-concrete.html">Tiling & concrete</a>
+                </h3><!-- /.service-card-two__title -->
+                <div class="service-card-two__bottom">
+                  <a
+                    href="service-d-tiling-concrete.html"
+                    class="service-card-two__link floens-btn"
+                  >
+                    <span>service details</span>
+                    <i class="icon-right-arrow"></i>
+                  </a>
+                  <span class="service-card-two__icon icon-tile"></span>
+                </div><!-- /.service-card-two__bottom -->
+              </div><!-- /.service-card-two__content -->
+            </div><!-- /.service-card-two -->
+          </div><!-- /.item -->
+          <div class="item">
+            <div class="service-card-two">
+              <div
+                class="service-card-two__bg"
+                style="background-image: url('assets/images/services/service-bg-2-1.png');"
+              >
+              </div><!-- /.service-card-two__bg -->
+              <div class="service-card-two__image">
+                <img
+                  src="assets/images/services/service-2-2.jpg"
+                  alt="Industrial Flooring"
+                />
+              </div><!-- /.service-card-two__image -->
+              <div class="service-card-two__content">
+                <h3 class="service-card-two__title">
+                  <a href="service-d-industrial-flooring.html"
+                    >Industrial Flooring</a
+                  >
+                </h3><!-- /.service-card-two__title -->
+                <div class="service-card-two__bottom">
+                  <a
+                    href="service-d-industrial-flooring.html"
+                    class="service-card-two__link floens-btn"
+                  >
+                    <span>service details</span>
+                    <i class="icon-right-arrow"></i>
+                  </a>
+                  <span class="service-card-two__icon icon-parquet"></span>
+                </div><!-- /.service-card-two__bottom -->
+              </div><!-- /.service-card-two__content -->
+            </div><!-- /.service-card-two -->
+          </div><!-- /.item -->
+          <div class="item">
+            <div class="service-card-two">
+              <div
+                class="service-card-two__bg"
+                style="background-image: url('assets/images/services/service-bg-2-1.png');"
+              >
+              </div><!-- /.service-card-two__bg -->
+              <div class="service-card-two__image">
+                <img
+                  src="assets/images/services/service-2-3.jpg"
+                  alt="Vinyl Plank"
+                />
+              </div><!-- /.service-card-two__image -->
+              <div class="service-card-two__content">
+                <h3 class="service-card-two__title">
+                  <a href="service-d-vinyl-plank.html">Vinyl Plank</a>
+                </h3><!-- /.service-card-two__title -->
+                <div class="service-card-two__bottom">
+                  <a
+                    href="service-d-vinyl-plank.html"
+                    class="service-card-two__link floens-btn"
+                  >
+                    <span>service details</span>
+                    <i class="icon-right-arrow"></i>
+                  </a>
+                  <span class="service-card-two__icon icon-tiles"></span>
+                </div><!-- /.service-card-two__bottom -->
+              </div><!-- /.service-card-two__content -->
+            </div><!-- /.service-card-two -->
+          </div><!-- /.item -->
+          <div class="item">
+            <div class="service-card-two">
+              <div
+                class="service-card-two__bg"
+                style="background-image: url('assets/images/services/service-bg-2-1.png');"
+              >
+              </div><!-- /.service-card-two__bg -->
+              <div class="service-card-two__image">
+                <img
+                  src="assets/images/services/service-2-4.jpg"
+                  alt="Carpets & rugs"
+                />
+              </div><!-- /.service-card-two__image -->
+              <div class="service-card-two__content">
+                <h3 class="service-card-two__title">
+                  <a href="service-d-carpets-rugs.html">Carpets & rugs</a>
+                </h3><!-- /.service-card-two__title -->
+                <div class="service-card-two__bottom">
+                  <a
+                    href="service-d-carpets-rugs.html"
+                    class="service-card-two__link floens-btn"
+                  >
+                    <span>service details</span>
+                    <i class="icon-right-arrow"></i>
+                  </a>
+                  <span class="service-card-two__icon icon-carpet"></span>
+                </div><!-- /.service-card-two__bottom -->
+              </div><!-- /.service-card-two__content -->
+            </div><!-- /.service-card-two -->
+          </div><!-- /.item -->
+          <div class="item">
+            <div class="service-card-two">
+              <div
+                class="service-card-two__bg"
+                style="background-image: url('assets/images/services/service-bg-2-1.png');"
+              >
+              </div><!-- /.service-card-two__bg -->
+              <div class="service-card-two__image">
+                <img
+                  src="assets/images/services/service-2-5.jpg"
+                  alt="Oak Flooring"
+                />
+              </div><!-- /.service-card-two__image -->
+              <div class="service-card-two__content">
+                <h3 class="service-card-two__title">
+                  <a href="service-d-oak-flooring.html">Oak Flooring</a>
+                </h3><!-- /.service-card-two__title -->
+                <div class="service-card-two__bottom">
+                  <a
+                    href="service-d-oak-flooring.html"
+                    class="service-card-two__link floens-btn"
+                  >
+                    <span>service details</span>
+                    <i class="icon-right-arrow"></i>
+                  </a>
+                  <span class="service-card-two__icon icon-wood-board"></span>
+                </div><!-- /.service-card-two__bottom -->
+              </div><!-- /.service-card-two__content -->
+            </div><!-- /.service-card-two -->
+          </div><!-- /.item -->
+          <div class="item">
+            <div class="service-card-two">
+              <div
+                class="service-card-two__bg"
+                style="background-image: url('assets/images/services/service-bg-2-1.png');"
+              >
+              </div><!-- /.service-card-two__bg -->
+              <div class="service-card-two__image">
+                <img
+                  src="assets/images/services/service-2-6.jpg"
+                  alt="Vein Patterns"
+                />
+              </div><!-- /.service-card-two__image -->
+              <div class="service-card-two__content">
+                <h3 class="service-card-two__title">
+                  <a href="service-d-vein-patterns.html">Vein Patterns</a>
+                </h3><!-- /.service-card-two__title -->
+                <div class="service-card-two__bottom">
+                  <a
+                    href="service-d-vein-patterns.html"
+                    class="service-card-two__link floens-btn"
+                  >
+                    <span>service details</span>
+                    <i class="icon-right-arrow"></i>
+                  </a>
+                  <span class="service-card-two__icon icon-stones"></span>
+                </div><!-- /.service-card-two__bottom -->
+              </div><!-- /.service-card-two__content -->
+            </div><!-- /.service-card-two -->
+          </div><!-- /.item -->
+        </div><!-- /.services-two__carousel -->
+      </div><!-- /.container-fluid -->
+    </section><!-- /.services-two section-space-two -->
+    <!-- services end -->
+
+    <!-- about start -->
+    <section class="about-two section-space">
+      <div
+        class="about-two__bg"
+        style="background-image: url(assets/images/backgrounds/about-bg-2-1.png);"
+      >
+      </div>
+      <!-- /.about-two__bg -->
+      <div class="container">
+        <div class="row gutter-y-60">
+          <div
+            class="col-lg-6 wow fadeInLeft"
+            data-wow-duration="1500ms"
+            data-wow-delay="00ms"
+          >
+            <div class="about-two__image">
+              <div class="about-two__image__inner">
+                <img
+                  src="assets/images/about/about-2-1.jpg"
+                  alt="about"
+                  class="about-two__image__one"
+                />
+                <div class="about-two__image__inner__inner">
+                  <img
+                    src="assets/images/about/about-2-2.jpg"
+                    alt="about"
+                    class="about-two__image__two"
+                  />
+                </div><!-- /.about-two__image__inner__inner -->
+                <div class="experience about-two__experience">
+                  <div class="experience__inner">
+                    <h3
+                      class="experience__year"
+                      style="background-image: url('assets/images/shapes/reliable-shape-1-1.png');"
+                    >
+                      5
+                    </h3>
+                    <!-- /.experience__year -->
+                    <p class="experience__text">years of <br /> experience</p>
+                    <!-- /.experience__text -->
+                  </div><!-- /.experience__inner -->
+                </div><!-- /.experience -->
+              </div><!-- /.about-two__image__inner -->
+            </div><!-- /.about-two__image-grid -->
+          </div><!-- /.col-lg-6 -->
+          <div class="col-lg-6">
+            <div class="about-two__content">
+              <div class="sec-title sec-title--border">
+                <h6 class="sec-title__tagline">
+                  about us
+                </h6><!-- /.sec-title__tagline -->
+
+                <h3 class="sec-title__title">
+                  Your Trusted Partner <br /> in Quartz Surfaces
+                </h3><!-- /.sec-title__title -->
+              </div><!-- /.sec-title -->
+
+              <div
+                class="about-two__content__text wow fadeInUp"
+                data-wow-duration="1500ms"
+                data-wow-delay="00ms"
+              >
+                <h5 class="about-two__text-title">
+                  Driven by Quality, Defined by Elegance
+                </h5>
+                <!-- /.about-two__text-title -->
+                <p class="about-two__text">
+                  At Fion Exim, we believe a truly exceptional surface goes
+                  beyond mere aesthetics. While we pride ourselves on offering
+                  premium quartz renowned for its beauty and durability, our
+                  true commitment lies in understanding your vision and helping
+                  you craft spaces that inspire. Founded in 2021 by Mr. Anand
+                  Panchal, our passion is rooted in providing not just a
+                  superior product, but a dedicated partnership.
+                </p>
+                <p class="about-two__text">
+                  This means unwavering attention to quality, a seamless
+                  experience, and a shared journey towards creating the heart of
+                  your home or the perfect finish for your kitchen. With Fion
+                  Exim, you're choosing more than quartz; you're choosing a
+                  commitment to lasting excellence and the realization of your
+                  design dreams.
+                </p>
+                <!-- /.about-two__text -->
+              </div><!-- /.about-two__content__text -->
+
+              <div
+                class="about-two__button wow fadeInUp"
+                data-wow-duration="1500ms"
+                data-wow-delay="200ms"
+              >
+                <a href="/about" class="floens-btn">
+                  <span>more about us</span>
+                  <i class="icon-right-arrow"></i>
+                </a><!-- /.floens-btn -->
+              </div><!-- /.about-two__button -->
+            </div><!-- /.about-two__content -->
+          </div><!-- /.col-lg-6 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /.about-two section-space -->
+    <!-- about end -->
+
+    <!-- testimonials start -->
+    <section class="testimonials-two section-space-two" id="testimonials">
+      <div class="container">
+        <div class="sec-title sec-title--center">
+          <h6 class="sec-title__tagline">
+            testimonial
+          </h6><!-- /.sec-title__tagline -->
+
+          <h3 class="sec-title__title">
+            What People are Talking <br /> About FionExim
+          </h3><!-- /.sec-title__title -->
+        </div><!-- /.sec-title -->
+
+        <div
+          class="testimonials-two__carousel floens-owl__carousel floens-owl__carousel--with-shadow floens-owl__carousel--basic-nav owl-carousel owl-theme"
+          data-owl-options='{
+                "items": 1,
+                "margin": 0,
+                "loop": true,
+                "smartSpeed": 700,
+                "nav": false,
+                "dots": false,
+                "autoplay": 600,
+                "responsive": {
+                    "0": {
+                        "items": 1,
+                        "nav": true,
+                        "dots": false,
+                        "margin": 10
+                    },
+                    "576": {
+                        "items": 1,
+                        "dots": true,
+                        "nav": false,
+                        "margin": 10
+                    },
+                    "768": {
+                        "items": 1,
+                        "dots": true,
+                        "nav": false,
+                        "margin": 10
+                    },
+                    "992": {
+                        "items": 2,
+                        "loop": false,
+                        "nav": false,
+                        "dots": false,
+                        "margin": 30
+                    }
+                }
+            }'
+        >
+          <div class="item">
+            <div class="testimonials-card @@extraClassName">
+              <div
+                class="testimonials-card__bg"
+                style="background-image: url(assets/images/testimonials/testimonials-card-bg.png);"
+              >
+              </div><!-- /.testimonials-card__bg -->
+              <div class="testimonials-card__top">
+                <div class="floens-ratings @@extraClassName">
+                  <span class="icon-star"></span>
+                  <span class="icon-star"></span>
+                  <span class="icon-star"></span>
+                  <span class="icon-star"></span>
+                  <span class="icon-star"></span>
+                </div><!-- /.product-ratings -->
+                <a
+                  href="https://www.youtube.com/watch?v=h9MbznbxlLc"
+                  class="testimonials-card__video video-button video-popup"
+                >
+                  <span class="icon-play"></span>
+                  <i class="video-button__ripple"></i>
+                </a><!-- /.testimonials-card__video -->
+              </div><!-- /.testimonials-card__top -->
+              <div class="testimonials-card__content">
+                <div class="testimonials-card__content__inner">
+                  <p class="testimonials-card__text">
+                    "I recently worked with <a
+                      href="about.html"
+                      class="testimonials-card__text__highlight">Floens</a
+                    > for my home renovation project, and I couldn't be happier with
+                    the results. From the moment I walked into their showroom, I
+                    was impressed by the extensive selection
+                  </p><!-- /.testimonials-card__text -->
+                </div><!-- /.testimonials-card__content__inner -->
+                <div class="testimonials-card__person">
+                  <div class="testimonials-card__person__inner">
+                    <img
+                      src="assets/images/testimonials/testimonials-1-1.jpg"
+                      alt="Michael G. Ware"
+                      class="testimonials-card__person__image"
+                    />
+                    <div class="testimonials-card__person__info">
+                      <h3 class="testimonials-card__person__name">
+                        Michael G. Ware
+                      </h3><!-- /.testimonials-card__person__name -->
+                      <span class="testimonials-card__person__designation"
+                        >managing director</span
+                      ><!-- /.testimonials-card__person__designation -->
+                    </div><!-- /.testimonials-card__person__info -->
+                  </div><!-- /.testimonials-card__person__inner -->
+                </div><!-- /.testimonials-card__person -->
+              </div><!-- /.testimonials-card__content -->
+              <div
+                class="testimonials-card__quotes"
+                style="background-image: url(assets/images/testimonials/testimonials-quote-bg-1-1.jpg);"
+              >
+                <svg
+                  class="testimonials-card__quotes__icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 52 38"
+                  fill="none"
+                >
+                  <path
+                    d="M0 23.7248H10.3849L3.46157 37.5713H13.8465L20.7698 23.7248V2.95508H0V23.7248Z"
+                  ></path>
+                  <path
+                    d="M27.6929 2.95508V23.7248H38.0778L31.1544 37.5713H41.5393L48.4626 23.7248V2.95508H27.6929Z"
+                  ></path>
+                  <path
+                    d="M13.34 20.2698H3.45508V0.5H23.2248V20.6517L16.4925 34.1162H7.22567L13.7872 20.9934L14.149 20.2698H13.34Z"
+                  ></path>
+                  <path
+                    d="M41.0328 20.2698H31.1479V0.5H50.9177V20.6517L44.1854 34.1162H34.9185L41.48 20.9934L41.8419 20.2698H41.0328Z"
+                  ></path>
+                </svg>
+              </div><!-- /.testimonials-card__quotes -->
+            </div><!-- /.testimonials-card -->
+          </div><!-- /.item -->
+          <div class="item">
+            <div class="testimonials-card @@extraClassName">
+              <div
+                class="testimonials-card__bg"
+                style="background-image: url(assets/images/testimonials/testimonials-card-bg.png);"
+              >
+              </div><!-- /.testimonials-card__bg -->
+              <div class="testimonials-card__top">
+                <div class="floens-ratings @@extraClassName">
+                  <span class="icon-star"></span>
+                  <span class="icon-star"></span>
+                  <span class="icon-star"></span>
+                  <span class="icon-star"></span>
+                  <span class="icon-star"></span>
+                </div><!-- /.product-ratings -->
+                <a
+                  href="https://www.youtube.com/watch?v=h9MbznbxlLc"
+                  class="testimonials-card__video video-button video-popup"
+                >
+                  <span class="icon-play"></span>
+                  <i class="video-button__ripple"></i>
+                </a><!-- /.testimonials-card__video -->
+              </div><!-- /.testimonials-card__top -->
+              <div class="testimonials-card__content">
+                <div class="testimonials-card__content__inner">
+                  <p class="testimonials-card__text">
+                    "I recently worked with <a
+                      href="about.html"
+                      class="testimonials-card__text__highlight">Floens</a
+                    > for my home renovation project, and I couldn't be happier with
+                    the results. From the moment I walked into their showroom, I
+                    was impressed by the extensive selection
+                  </p><!-- /.testimonials-card__text -->
+                </div><!-- /.testimonials-card__content__inner -->
+                <div class="testimonials-card__person">
+                  <div class="testimonials-card__person__inner">
+                    <img
+                      src="assets/images/testimonials/testimonials-1-2.jpg"
+                      alt="Anthony B. Castillo"
+                      class="testimonials-card__person__image"
+                    />
+                    <div class="testimonials-card__person__info">
+                      <h3 class="testimonials-card__person__name">
+                        Anthony B. Castillo
+                      </h3><!-- /.testimonials-card__person__name -->
+                      <span class="testimonials-card__person__designation"
+                        >managing director</span
+                      ><!-- /.testimonials-card__person__designation -->
+                    </div><!-- /.testimonials-card__person__info -->
+                  </div><!-- /.testimonials-card__person__inner -->
+                </div><!-- /.testimonials-card__person -->
+              </div><!-- /.testimonials-card__content -->
+              <div
+                class="testimonials-card__quotes"
+                style="background-image: url(assets/images/testimonials/testimonials-quote-bg-1-2.jpg);"
+              >
+                <svg
+                  class="testimonials-card__quotes__icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 52 38"
+                  fill="none"
+                >
+                  <path
+                    d="M0 23.7248H10.3849L3.46157 37.5713H13.8465L20.7698 23.7248V2.95508H0V23.7248Z"
+                  ></path>
+                  <path
+                    d="M27.6929 2.95508V23.7248H38.0778L31.1544 37.5713H41.5393L48.4626 23.7248V2.95508H27.6929Z"
+                  ></path>
+                  <path
+                    d="M13.34 20.2698H3.45508V0.5H23.2248V20.6517L16.4925 34.1162H7.22567L13.7872 20.9934L14.149 20.2698H13.34Z"
+                  ></path>
+                  <path
+                    d="M41.0328 20.2698H31.1479V0.5H50.9177V20.6517L44.1854 34.1162H34.9185L41.48 20.9934L41.8419 20.2698H41.0328Z"
+                  ></path>
+                </svg>
+              </div><!-- /.testimonials-card__quotes -->
+            </div><!-- /.testimonials-card -->
+          </div><!-- /.item -->
+        </div><!-- /.testimonials-two__carousel -->
+      </div><!-- /.container -->
+    </section><!-- /.testimonials-two section-space-two -->
+    <!-- testimonials end -->
+
+    <Footer />
+    <!-- /.main-footer -->
+  </div><!-- /.page-wrapper -->
+
+  <div class="mobile-nav__wrapper">
+    <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+    <!-- /.mobile-nav__overlay -->
+    <div class="mobile-nav__content">
+      <span class="mobile-nav__close mobile-nav__toggler"
+        ><i class="fa fa-times"></i></span
+      >
+
+      <div class="logo-box">
+        <a href="index.html" aria-label="logo image"
+          ><img
+            src="assets/images/logo-light.png"
+            width="155"
+            alt="logo-light"
+          /></a
+        >
+      </div>
+      <!-- /.logo-box -->
+      <div class="mobile-nav__container"></div>
+      <!-- /.mobile-nav__container -->
+
+      <ul class="mobile-nav__contact list-unstyled">
+        <li>
+          <i class="fa fa-envelope"></i>
+          <a href="mailto:needhelp@floens.com">needhelp@floens.com</a>
+        </li>
+        <li>
+          <i class="fa fa-phone-alt"></i>
+          <a href="tel:+9156980036420">+91 5698 0036 420</a>
+        </li>
+      </ul><!-- /.mobile-nav__contact -->
+      <div class="mobile-nav__social">
+        <a href="https://facebook.com/">
+          <i class="icon-facebook" aria-hidden="true"></i>
+          <span class="sr-only">Facebook</span>
+        </a>
+        <a href="https://twitter.com/">
+          <i class="icon-twitter" aria-hidden="true"></i>
+          <span class="sr-only">Twitter</span>
+        </a>
+        <a href="https://instagram.com/">
+          <i class="icon-instagram" aria-hidden="true"></i>
+          <span class="sr-only">Instagram</span>
+        </a>
+        <a href="https://youtube.com/">
+          <i class="icon-youtube" aria-hidden="true"></i>
+          <span class="sr-only">Youtube</span>
+        </a>
+      </div><!-- /.mobile-nav__social -->
+    </div>
+    <!-- /.mobile-nav__content -->
+  </div>
+  <!-- /.mobile-nav__wrapper -->
+
+  <aside class="sidebar-one">
+    <div class="sidebar-one__overlay sidebar-btn__toggler">
+    </div><!-- /.siderbar-ovarlay -->
+    <div class="sidebar-one__content">
+      <span class="sidebar-one__close sidebar-btn__toggler"
+        ><i class="fa fa-times"></i></span
+      >
+      <div class="sidebar-one__logo sidebar-one__item">
+        <a href="index.html" aria-label="logo image"
+          ><img
+            src="assets/images/logo-light.png"
+            width="123"
+            alt="logo-dark"
+          /></a
+        >
+      </div><!-- /.sidebar-one__logo -->
+      <div class="sidebar-one__about sidebar-one__item">
+        <p class="sidebar-one__about__text">
+          Tiles company, also known as a tile manufacturer or distributor,
+          specializes in the production and distri
+        </p>
+      </div><!-- /.sidebar-one__about -->
+      <div class="sidebar-one__info sidebar-one__item">
+        <h4 class="sidebar-one__title">Information</h4>
+        <ul class="sidebar-one__info__list">
+          <li>
+            <span class="icon-location-2"></span>
+            <address>85 Ketch Harbour Road Bensal PA 19020</address>
+          </li>
+          <li>
+            <span class="icon-paper-plane"></span>
+            <a href="mailto:needhelp@company.com">needhelp@company.com</a>
+          </li>
+          <li>
+            <span class="icon-phone-call"></span>
+            <a href="tel:+9156980036420">+91 5698 0036 420</a>
+          </li>
+        </ul><!-- /.sidebar-one__info__list -->
+      </div><!-- /.sidebar-one__info -->
+      <div class="sidebar-one__social floens-social sidebar-one__item">
+        <a href="https://facebook.com/">
+          <i class="icon-facebook" aria-hidden="true"></i>
+          <span class="sr-only">Facebook</span>
+        </a>
+        <a href="https://twitter.com/">
+          <i class="icon-twitter" aria-hidden="true"></i>
+          <span class="sr-only">Twitter</span>
+        </a>
+        <a href="https://instagram.com/">
+          <i class="icon-instagram" aria-hidden="true"></i>
+          <span class="sr-only">Instagram</span>
+        </a>
+        <a href="https://youtube.com/">
+          <i class="icon-youtube" aria-hidden="true"></i>
+          <span class="sr-only">Youtube</span>
+        </a>
+      </div><!-- /sidebar-one__social -->
+      <div class="sidebar-one__newsletter sidebar-one__item">
+        <label class="sidebar-one__title" for="sidebar-email"
+          >Newsletter Subscribe</label
+        >
+        <form
+          action="#"
+          class="sidebar-one__newsletter__inner mc-form"
+          data-url="MAILCHIMP_FORM_URL"
+        >
+          <input
+            type="email"
+            name="sidebar-email"
+            id="sidebar-email"
+            class="sidebar-one__newsletter__input"
+            placeholder="Email Address"
+          />
+          <button type="submit" class="sidebar-one__newsletter__btn"
+            ><span class="icon-email" aria-hidden="true"></span></button
+          >
+        </form>
+        <div class="mc-form__response"></div><!-- /.mc-form__response -->
+      </div><!-- /.sidebar-one__form -->
+    </div><!-- /.sidebar__content -->
+  </aside><!-- /.sidebar-one -->
+
+  <a href="#" data-target="html" class="scroll-to-target scroll-to-top">
+    <span class="scroll-to-top__text">back top</span>
+    <span class="scroll-to-top__wrapper"
+      ><span class="scroll-to-top__inner"></span></span
+    >
+  </a>
+</Layout>
