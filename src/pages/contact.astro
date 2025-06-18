@@ -1,6 +1,7 @@
 ---
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
+import MobileNav from "../components/MobileNav.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -119,7 +120,9 @@ import Layout from "../layouts/Layout.astro";
               class="contact-one__form contact-form-validated form-one wow fadeInUp"
               data-wow-duration="1500ms"
               data-wow-delay="200ms"
-              action="https://bracketweb.com/floens-html/inc/sendemail.php"
+              action="https://api.web3forms.com/submit"
+              method="POST"
+              id="form"
             >
               <div
                 class="contact-one__form__bg"
@@ -136,22 +139,24 @@ import Layout from "../layouts/Layout.astro";
                 <div
                   class="form-one__control form-one__control--input form-one__control--full"
                 >
+                  <input
+                    type="hidden"
+                    name="access_key"
+                    value="6169c8c8-2d30-44f5-a8f6-e45b8f46361b"
+                  />
                   <input type="text" name="name" placeholder="Your name" />
                 </div><!-- /.form-one__control form-one__control--full -->
+
                 <div class="form-one__control form-one__control--full">
                   <input type="email" name="email" placeholder="your email" />
                 </div><!-- /.form-one__control form-one__control--full -->
                 <div class="form-one__control form-one__control--full">
-                  <select class="selectpicker" aria-label="Choose service">
-                    <option selected>Choose service</option>
-                    <option value="1">Tiling & concrete</option>
-                    <option value="2">Industrial Flooring</option>
-                    <option value="3">Vinyl Plank</option>
-                    <option value="4">Carpets & rugs</option>
-                    <option value="5">Oak Flooring</option>
-                    <option value="6">Vein Patterns</option>
-                  </select>
-                </div><!-- /.form-one__control form-one__control--full -->
+                  <input
+                    type="text"
+                    name="phone"
+                    placeholder="your mobile number"
+                  />
+                </div>
                 <div
                   class="form-one__control form-one__control--mesgae form-one__control--full"
                 >
@@ -192,58 +197,7 @@ import Layout from "../layouts/Layout.astro";
     <Footer />
   </div>
 
-  <div class="mobile-nav__wrapper">
-    <div class="mobile-nav__overlay mobile-nav__toggler"></div>
-    <!-- /.mobile-nav__overlay -->
-    <div class="mobile-nav__content">
-      <span class="mobile-nav__close mobile-nav__toggler"
-        ><i class="fa fa-times"></i></span
-      >
-
-      <div class="logo-box">
-        <a href="index.html" aria-label="logo image"
-          ><img
-            src="assets/images/logo-light.png"
-            width="155"
-            alt="logo-light"
-          /></a
-        >
-      </div>
-      <!-- /.logo-box -->
-      <div class="mobile-nav__container"></div>
-      <!-- /.mobile-nav__container -->
-
-      <ul class="mobile-nav__contact list-unstyled">
-        <li>
-          <i class="fa fa-envelope"></i>
-          <a href="mailto:needhelp@floens.com">needhelp@floens.com</a>
-        </li>
-        <li>
-          <i class="fa fa-phone-alt"></i>
-          <a href="tel:+9156980036420">+91 5698 0036 420</a>
-        </li>
-      </ul><!-- /.mobile-nav__contact -->
-      <div class="mobile-nav__social">
-        <a href="https://facebook.com/">
-          <i class="icon-facebook" aria-hidden="true"></i>
-          <span class="sr-only">Facebook</span>
-        </a>
-        <a href="https://twitter.com/">
-          <i class="icon-twitter" aria-hidden="true"></i>
-          <span class="sr-only">Twitter</span>
-        </a>
-        <a href="https://instagram.com/">
-          <i class="icon-instagram" aria-hidden="true"></i>
-          <span class="sr-only">Instagram</span>
-        </a>
-        <a href="https://youtube.com/">
-          <i class="icon-youtube" aria-hidden="true"></i>
-          <span class="sr-only">Youtube</span>
-        </a>
-      </div><!-- /.mobile-nav__social -->
-    </div>
-    <!-- /.mobile-nav__content -->
-  </div>
+  <MobileNav />
   <!-- /.mobile-nav__wrapper -->
 
   <aside class="sidebar-one">
@@ -335,3 +289,61 @@ import Layout from "../layouts/Layout.astro";
     >
   </a>
 </Layout>
+
+<script is:inline>
+  // use astro:page-load event if you are using View Transitions
+
+  document.addEventListener(
+    "DOMContentLoaded",
+    () => {
+      const form = document.getElementById("form");
+      const result = document.getElementById("result");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        form.classList.add("was-validated");
+        if (!form.checkValidity()) {
+          form.querySelectorAll(":invalid")[0].focus();
+          return;
+        }
+        const formData = new FormData(form);
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
+
+        result.innerHTML = "Sending...";
+
+        fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: json,
+        })
+          .then(async (response) => {
+            let json = await response.json();
+            if (response.status == 200) {
+              result.classList.add("text-green-500");
+              result.innerHTML = json.message;
+            } else {
+              console.log(response);
+              result.classList.add("text-red-500");
+              result.innerHTML = json.message;
+            }
+          })
+          .catch((error) => {
+            console.log(error);
+            result.innerHTML = "Something went wrong!";
+          })
+          .then(function () {
+            form.reset();
+            form.classList.remove("was-validated");
+            setTimeout(() => {
+              result.style.display = "none";
+            }, 5000);
+          });
+      });
+    },
+    { once: true }
+  );
+</script>
