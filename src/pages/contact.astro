@@ -169,6 +169,8 @@ import Layout from "../layouts/Layout.astro";
                     <i class="icon-right-arrow"></i>
                   </button>
                 </div><!-- /.form-one__control -->
+                <div id="result" class="form-result" style="margin-top: 1rem;">
+                </div>
               </div><!-- /.form-one__group -->
             </form>
           </div><!-- /.col-xl-6 -->
@@ -310,6 +312,8 @@ import Layout from "../layouts/Layout.astro";
         const object = Object.fromEntries(formData);
         const json = JSON.stringify(object);
 
+        result.style.display = "block";
+        result.className = "form-result";
         result.innerHTML = "Sending...";
 
         fetch("https://api.web3forms.com/submit", {
@@ -325,6 +329,8 @@ import Layout from "../layouts/Layout.astro";
             if (response.status == 200) {
               result.classList.add("text-green-500");
               result.innerHTML = json.message;
+              form.reset();
+              form.classList.remove("was-validated");
             } else {
               console.log(response);
               result.classList.add("text-red-500");
@@ -333,13 +339,13 @@ import Layout from "../layouts/Layout.astro";
           })
           .catch((error) => {
             console.log(error);
+            result.classList.add("text-red-500");
             result.innerHTML = "Something went wrong!";
           })
           .then(function () {
-            form.reset();
-            form.classList.remove("was-validated");
             setTimeout(() => {
               result.style.display = "none";
+              result.className = "form-result";
             }, 5000);
           });
       });
