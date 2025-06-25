@@ -1835,14 +1835,10 @@ p {
 .team-two__image__inner::after {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+
   background-color: var(--floens-base, #ffb544);
-  transform: rotate(-9.5deg);
 }
-.team-two__image img {
+.team-two__image p {
   position: relative;
   display: block;
   width: 100%;
